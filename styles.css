@@ -441,7 +441,6 @@ em { font-style: italic; color: var(--gold-deep); }
 }
 .field textarea { resize: vertical; }
 .form-note { font-size: 0.85rem; color: var(--espresso-soft); margin: 0.9rem 0 0; text-align: center; }
-.hp { display: none !important; }
 .form-status {
   margin: 0.8rem 0 0;
   text-align: center;
