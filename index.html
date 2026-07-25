@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Seguridad: restringe el origen de los recursos y protege la privacidad -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self'; form-action mailto:; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
   <title>Hogar La Presencia de Jehová — Cuido con amor y dignidad</title>
   <meta name="description" content="Hogar de cuido para envejecientes y personas con diversidad funcional. Un lugar seguro donde cada residente es atendido con amor, respeto y dignidad." />
   <meta name="theme-color" content="#6e5643" />
@@ -29,7 +34,7 @@
   <header class="site-header" id="inicio">
     <nav class="nav" aria-label="Navegación principal">
       <a class="brand" href="#inicio" aria-label="Inicio — Hogar La Presencia de Jehová">
-        <img src="assets/logo.png" onerror="this.onerror=null;this.src='assets/logo.svg'" alt="" class="brand-mark" width="52" height="52" />
+        <img src="assets/logo.png" data-fallback="assets/logo.svg" alt="" class="brand-mark" width="52" height="52" />
         <span class="brand-text">
           <span class="brand-name">Hogar</span>
           <span class="brand-sub">La Presencia de Jehová</span>
@@ -78,7 +83,7 @@
         </div>
         <div class="hero-emblem reveal">
           <div class="emblem-halo">
-            <img src="assets/logo.png" onerror="this.onerror=null;this.src='assets/logo.svg'" alt="Emblema del Hogar La Presencia de Jehová: águila con alas abiertas sobre un libro abierto y una cruz, rodeado de ramas de olivo." />
+            <img src="assets/logo.png" data-fallback="assets/logo.svg" alt="Emblema del Hogar La Presencia de Jehová: águila con alas abiertas sobre un libro abierto y una cruz, rodeado de ramas de olivo." />
           </div>
         </div>
       </div>
@@ -252,78 +257,78 @@
           <div class="carousel-viewport">
             <ul class="carousel-track">
               <li class="slide" role="group" aria-label="Foto 1 de 15">
-                <img class="slide-bg" src="assets/fotos/Foto%201.jpeg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()" />
-                <img class="slide-photo" src="assets/fotos/Foto%201.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" onerror="this.closest('.slide').classList.add('is-placeholder')" />
+                <img class="slide-bg" src="assets/fotos/Foto%201.jpeg" alt="" aria-hidden="true" loading="lazy" />
+                <img class="slide-photo" src="assets/fotos/Foto%201.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" />
                 <div class="slide-ph"><span>Foto no disponible</span></div>
               </li>
               <li class="slide" role="group" aria-label="Foto 2 de 15">
-                <img class="slide-bg" src="assets/fotos/foto%202.jpeg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()" />
-                <img class="slide-photo" src="assets/fotos/foto%202.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" onerror="this.closest('.slide').classList.add('is-placeholder')" />
+                <img class="slide-bg" src="assets/fotos/foto%202.jpeg" alt="" aria-hidden="true" loading="lazy" />
+                <img class="slide-photo" src="assets/fotos/foto%202.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" />
                 <div class="slide-ph"><span>Foto no disponible</span></div>
               </li>
               <li class="slide" role="group" aria-label="Foto 3 de 15">
-                <img class="slide-bg" src="assets/fotos/foto%203.jpeg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()" />
-                <img class="slide-photo" src="assets/fotos/foto%203.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" onerror="this.closest('.slide').classList.add('is-placeholder')" />
+                <img class="slide-bg" src="assets/fotos/foto%203.jpeg" alt="" aria-hidden="true" loading="lazy" />
+                <img class="slide-photo" src="assets/fotos/foto%203.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" />
                 <div class="slide-ph"><span>Foto no disponible</span></div>
               </li>
               <li class="slide" role="group" aria-label="Foto 4 de 15">
-                <img class="slide-bg" src="assets/fotos/foto%204.jpeg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()" />
-                <img class="slide-photo" src="assets/fotos/foto%204.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" onerror="this.closest('.slide').classList.add('is-placeholder')" />
+                <img class="slide-bg" src="assets/fotos/foto%204.jpeg" alt="" aria-hidden="true" loading="lazy" />
+                <img class="slide-photo" src="assets/fotos/foto%204.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" />
                 <div class="slide-ph"><span>Foto no disponible</span></div>
               </li>
               <li class="slide" role="group" aria-label="Foto 5 de 15">
-                <img class="slide-bg" src="assets/fotos/foto%205.jpeg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()" />
-                <img class="slide-photo" src="assets/fotos/foto%205.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" onerror="this.closest('.slide').classList.add('is-placeholder')" />
+                <img class="slide-bg" src="assets/fotos/foto%205.jpeg" alt="" aria-hidden="true" loading="lazy" />
+                <img class="slide-photo" src="assets/fotos/foto%205.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" />
                 <div class="slide-ph"><span>Foto no disponible</span></div>
               </li>
               <li class="slide" role="group" aria-label="Foto 6 de 15">
-                <img class="slide-bg" src="assets/fotos/foto%206.jpeg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()" />
-                <img class="slide-photo" src="assets/fotos/foto%206.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" onerror="this.closest('.slide').classList.add('is-placeholder')" />
+                <img class="slide-bg" src="assets/fotos/foto%206.jpeg" alt="" aria-hidden="true" loading="lazy" />
+                <img class="slide-photo" src="assets/fotos/foto%206.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" />
                 <div class="slide-ph"><span>Foto no disponible</span></div>
               </li>
               <li class="slide" role="group" aria-label="Foto 7 de 15">
-                <img class="slide-bg" src="assets/fotos/foto%207.jpeg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()" />
-                <img class="slide-photo" src="assets/fotos/foto%207.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" onerror="this.closest('.slide').classList.add('is-placeholder')" />
+                <img class="slide-bg" src="assets/fotos/foto%207.jpeg" alt="" aria-hidden="true" loading="lazy" />
+                <img class="slide-photo" src="assets/fotos/foto%207.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" />
                 <div class="slide-ph"><span>Foto no disponible</span></div>
               </li>
               <li class="slide" role="group" aria-label="Foto 8 de 15">
-                <img class="slide-bg" src="assets/fotos/foto%208.jpeg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()" />
-                <img class="slide-photo" src="assets/fotos/foto%208.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" onerror="this.closest('.slide').classList.add('is-placeholder')" />
+                <img class="slide-bg" src="assets/fotos/foto%208.jpeg" alt="" aria-hidden="true" loading="lazy" />
+                <img class="slide-photo" src="assets/fotos/foto%208.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" />
                 <div class="slide-ph"><span>Foto no disponible</span></div>
               </li>
               <li class="slide" role="group" aria-label="Foto 9 de 15">
-                <img class="slide-bg" src="assets/fotos/foto%209.jpeg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()" />
-                <img class="slide-photo" src="assets/fotos/foto%209.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" onerror="this.closest('.slide').classList.add('is-placeholder')" />
+                <img class="slide-bg" src="assets/fotos/foto%209.jpeg" alt="" aria-hidden="true" loading="lazy" />
+                <img class="slide-photo" src="assets/fotos/foto%209.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" />
                 <div class="slide-ph"><span>Foto no disponible</span></div>
               </li>
               <li class="slide" role="group" aria-label="Foto 10 de 15">
-                <img class="slide-bg" src="assets/fotos/foto%2010.jpeg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()" />
-                <img class="slide-photo" src="assets/fotos/foto%2010.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" onerror="this.closest('.slide').classList.add('is-placeholder')" />
+                <img class="slide-bg" src="assets/fotos/foto%2010.jpeg" alt="" aria-hidden="true" loading="lazy" />
+                <img class="slide-photo" src="assets/fotos/foto%2010.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" />
                 <div class="slide-ph"><span>Foto no disponible</span></div>
               </li>
               <li class="slide" role="group" aria-label="Foto 11 de 15">
-                <img class="slide-bg" src="assets/fotos/foto%2011.jpeg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()" />
-                <img class="slide-photo" src="assets/fotos/foto%2011.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" onerror="this.closest('.slide').classList.add('is-placeholder')" />
+                <img class="slide-bg" src="assets/fotos/foto%2011.jpeg" alt="" aria-hidden="true" loading="lazy" />
+                <img class="slide-photo" src="assets/fotos/foto%2011.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" />
                 <div class="slide-ph"><span>Foto no disponible</span></div>
               </li>
               <li class="slide" role="group" aria-label="Foto 12 de 15">
-                <img class="slide-bg" src="assets/fotos/foto%2012.jpeg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()" />
-                <img class="slide-photo" src="assets/fotos/foto%2012.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" onerror="this.closest('.slide').classList.add('is-placeholder')" />
+                <img class="slide-bg" src="assets/fotos/foto%2012.jpeg" alt="" aria-hidden="true" loading="lazy" />
+                <img class="slide-photo" src="assets/fotos/foto%2012.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" />
                 <div class="slide-ph"><span>Foto no disponible</span></div>
               </li>
               <li class="slide" role="group" aria-label="Foto 13 de 15">
-                <img class="slide-bg" src="assets/fotos/foto%2013.jpeg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()" />
-                <img class="slide-photo" src="assets/fotos/foto%2013.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" onerror="this.closest('.slide').classList.add('is-placeholder')" />
+                <img class="slide-bg" src="assets/fotos/foto%2013.jpeg" alt="" aria-hidden="true" loading="lazy" />
+                <img class="slide-photo" src="assets/fotos/foto%2013.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" />
                 <div class="slide-ph"><span>Foto no disponible</span></div>
               </li>
               <li class="slide" role="group" aria-label="Foto 14 de 15">
-                <img class="slide-bg" src="assets/fotos/foto%2014.jpeg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()" />
-                <img class="slide-photo" src="assets/fotos/foto%2014.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" onerror="this.closest('.slide').classList.add('is-placeholder')" />
+                <img class="slide-bg" src="assets/fotos/foto%2014.jpeg" alt="" aria-hidden="true" loading="lazy" />
+                <img class="slide-photo" src="assets/fotos/foto%2014.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" />
                 <div class="slide-ph"><span>Foto no disponible</span></div>
               </li>
               <li class="slide" role="group" aria-label="Foto 15 de 15">
-                <img class="slide-bg" src="assets/fotos/foto%2015.jpeg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()" />
-                <img class="slide-photo" src="assets/fotos/foto%2015.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" onerror="this.closest('.slide').classList.add('is-placeholder')" />
+                <img class="slide-bg" src="assets/fotos/foto%2015.jpeg" alt="" aria-hidden="true" loading="lazy" />
+                <img class="slide-photo" src="assets/fotos/foto%2015.jpeg" alt="Actividad en el Hogar La Presencia de Jehová" loading="lazy" />
                 <div class="slide-ph"><span>Foto no disponible</span></div>
               </li>
             </ul>
@@ -366,7 +371,7 @@
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 5c0 8 7 15 15 15l0-4-4-2-2 2c-2-1-4-3-5-5l2-2-2-4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
             787-897-2860
           </a>
-          <a class="btn btn-outline-light btn-icon" href="https://maps.app.goo.gl/G7qsvJbpqfTYqSNn8" target="_blank" rel="noopener">
+          <a class="btn btn-outline-light btn-icon" href="https://maps.app.goo.gl/G7qsvJbpqfTYqSNn8" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
             Cómo llegar
           </a>
@@ -406,7 +411,7 @@
             </li>
           </ul>
 
-          <a class="btn btn-ghost btn-icon contact-map-btn" href="https://maps.app.goo.gl/G7qsvJbpqfTYqSNn8" target="_blank" rel="noopener">
+          <a class="btn btn-ghost btn-icon contact-map-btn" href="https://maps.app.goo.gl/G7qsvJbpqfTYqSNn8" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 20l-6 2V6l6-2 6 2 6-2v16l-6 2-6-2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 4v16M15 6v16" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
             Ver ubicación en el mapa
           </a>
@@ -440,7 +445,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="assets/logo.png" onerror="this.onerror=null;this.src='assets/logo.svg'" alt="" width="60" height="60" />
+        <img src="assets/logo.png" data-fallback="assets/logo.svg" alt="" width="60" height="60" />
         <div>
           <p class="footer-name">Hogar La Presencia de Jehová</p>
           <p class="footer-tag">Cuido con amor, respeto y dignidad.</p>
@@ -449,7 +454,7 @@
       <ul class="footer-contact">
         <li><a href="tel:+17878972860">787-897-2860</a></li>
         <li><a href="mailto:hlapresenciadejehova@yahoo.com">hlapresenciadejehova@yahoo.com</a></li>
-        <li><a href="https://maps.app.goo.gl/G7qsvJbpqfTYqSNn8" target="_blank" rel="noopener">Carr. 129 km 22.2, Bo. Callejones, Sect. Los Torres, Lares, PR 00669</a></li>
+        <li><a href="https://maps.app.goo.gl/G7qsvJbpqfTYqSNn8" target="_blank" rel="noopener noreferrer">Carr. 129 km 22.2, Bo. Callejones, Sect. Los Torres, Lares, PR 00669</a></li>
       </ul>
       <nav class="footer-nav" aria-label="Enlaces del pie de página">
         <a href="#nosotros">Nosotros</a>

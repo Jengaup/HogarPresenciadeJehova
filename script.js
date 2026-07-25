@@ -2,6 +2,38 @@
 (function () {
   'use strict';
 
+  // ----- Respaldo de imágenes (sin manejadores en línea, compatible con CSP) -----
+  // Ejecuta cb si la imagen falló (ya sea ahora o cuando falle al cargar).
+  function onImgError(img, cb) {
+    if (img.complete && img.naturalWidth === 0) {
+      cb.call(img);
+    } else {
+      img.addEventListener('error', function handler() {
+        img.removeEventListener('error', handler);
+        cb.call(img);
+      });
+    }
+  }
+
+  // Logo: si assets/logo.png no carga, usa el emblema SVG (data-fallback)
+  document.querySelectorAll('img[data-fallback]').forEach(function (img) {
+    onImgError(img, function () {
+      var fb = this.getAttribute('data-fallback');
+      if (fb && this.getAttribute('src') !== fb) { this.src = fb; }
+    });
+  });
+
+  // Carrusel: foto que no carga -> muestra marcador; fondo difuminado -> se elimina
+  document.querySelectorAll('.slide-photo').forEach(function (img) {
+    onImgError(img, function () {
+      var slide = this.closest('.slide');
+      if (slide) { slide.classList.add('is-placeholder'); }
+    });
+  });
+  document.querySelectorAll('.slide-bg').forEach(function (img) {
+    onImgError(img, function () { this.remove(); });
+  });
+
   // ----- Menú móvil -----
   var toggle = document.querySelector('.nav-toggle');
   var menu = document.getElementById('nav-menu');
