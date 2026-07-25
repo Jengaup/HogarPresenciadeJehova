@@ -131,6 +131,43 @@
     start();
   }
 
+  // ----- Formulario de contacto (abre el correo, sin action mailto inseguro) -----
+  var form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = form.getAttribute('data-email');
+      var val = function (id) {
+        var el = document.getElementById(id);
+        return el ? el.value.trim() : '';
+      };
+      var nombre = val('nombre');
+      var telefono = val('telefono');
+      var correo = val('email');
+      var mensaje = val('mensaje');
+
+      var subject = 'Consulta desde la página web' + (nombre ? ' - ' + nombre : '');
+      var lines = [
+        'Nombre: ' + nombre,
+        'Teléfono: ' + telefono,
+        'Correo: ' + correo,
+        '',
+        'Mensaje:',
+        mensaje
+      ];
+      var href = 'mailto:' + email +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(lines.join('\n'));
+
+      var status = document.getElementById('formStatus');
+      if (status) {
+        status.hidden = false;
+        status.textContent = 'Abriendo tu aplicación de correo para enviar el mensaje…';
+      }
+      window.location.href = href;
+    });
+  }
+
   // ----- Año en el pie -----
   var year = document.getElementById('year');
   if (year) { year.textContent = new Date().getFullYear(); }

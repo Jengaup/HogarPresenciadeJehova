@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Seguridad: restringe el origen de los recursos y protege la privacidad -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self'; form-action mailto:; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self'; form-action 'self'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
   <title>Hogar La Presencia de Jehová — Cuido con amor y dignidad</title>
@@ -486,7 +486,7 @@
           </div>
         </div>
 
-        <form class="contact-form reveal" action="mailto:hlapresenciadejehova@yahoo.com" method="post" enctype="text/plain">
+        <form class="contact-form reveal" id="contactForm" data-email="hlapresenciadejehova@yahoo.com">
           <div class="field">
             <label for="nombre">Nombre completo</label>
             <input id="nombre" name="Nombre" type="text" autocomplete="name" required />
@@ -505,6 +505,7 @@
           </div>
           <button class="btn btn-primary btn-block" type="submit">Enviar mensaje</button>
           <p class="form-note">Te responderemos lo antes posible. Tu información es tratada con confidencialidad.</p>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite" hidden></p>
         </form>
       </div>
     </section>
