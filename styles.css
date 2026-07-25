@@ -734,6 +734,6 @@ em { font-style: italic; color: var(--gold-deep); }
   .carousel-btn.prev { left: 8px; }
   .carousel-btn.next { right: 8px; }
   .slide-caption { font-size: 1.15rem; }
-  .fab-call span { display: none; }
-  .fab-call { padding: 0.9em; }
+  .fab span { display: none; }
+  .fab { padding: 0.9em; }
 }
