@@ -37,14 +37,32 @@ python3 -m http.server 8000
 5. En unos minutos el sitio estará disponible en
    `https://<usuario>.github.io/<repositorio>/`.
 
+## Cómo añadir el logo oficial
+
+El sitio busca primero `assets/logo.jpeg` y, si no existe, muestra el emblema
+`assets/logo.svg` como respaldo. Para usar tu logo oficial solo tienes que subir
+el archivo con el nombre exacto **`assets/logo.jpeg`**:
+
+1. En GitHub abre el repositorio y entra a la carpeta `assets`.
+2. Pulsa **Add file → Upload files**.
+3. Arrastra tu logo, renómbralo a `logo.jpeg` y confirma (**Commit changes**).
+
+Aparecerá automáticamente en el encabezado, el hero y el pie de página. (Si tu
+archivo es `.png` o `.jpg`, súbelo con ese nombre y ajusta la extensión en las
+etiquetas `<img>` de `index.html`.)
+
+## Cómo añadir las fotos del carrusel
+
+Sube las fotos del hogar a la carpeta **`assets/fotos/`** con estos nombres:
+`foto1.jpg`, `foto2.jpg`, `foto3.jpg`, `foto4.jpg`, `foto5.jpg`
+(ver `assets/fotos/LEEME.txt` para recomendaciones de tamaño). Mientras no
+existan, el carrusel muestra un marcador con el nombre del archivo que falta.
+
 ## Personalización rápida
 
-- **Logo oficial:** el sitio usa `assets/logo.svg` (una interpretación del logo en
-  la paleta de la marca). Si prefieres usar tu imagen oficial, coloca tu archivo
-  como `assets/logo.png` y reemplaza `assets/logo.svg` por `assets/logo.png` en las
-  etiquetas `<img>` de `index.html`.
-- **Datos de contacto:** edita el teléfono, correo y dirección en la sección
-  `#contacto` de `index.html`.
+- **Datos de contacto:** teléfono, correo, dirección y enlace del mapa están en
+  la sección `#contacto` y en el pie de `index.html`.
+- **Textos de las fotos:** edita `slide-caption` en cada foto del carrusel.
 - **Colores:** ajusta las variables al inicio de `styles.css` (`:root`).
 
 ## Nota sobre el formulario de contacto
