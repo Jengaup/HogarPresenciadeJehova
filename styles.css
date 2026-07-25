@@ -441,6 +441,7 @@ em { font-style: italic; color: var(--gold-deep); }
 }
 .field textarea { resize: vertical; }
 .form-note { font-size: 0.85rem; color: var(--espresso-soft); margin: 0.9rem 0 0; text-align: center; }
+.hp { display: none !important; }
 .form-status {
   margin: 0.8rem 0 0;
   text-align: center;
@@ -450,6 +451,11 @@ em { font-style: italic; color: var(--gold-deep); }
   border: 1px solid rgba(157, 176, 140, 0.4);
   border-radius: 12px;
   padding: 0.7em 1em;
+}
+.form-status.is-error {
+  color: #9a3b2f;
+  background: rgba(154, 59, 47, 0.1);
+  border-color: rgba(154, 59, 47, 0.35);
 }
 
 /* ===== Footer ===== */

@@ -131,40 +131,45 @@
     start();
   }
 
-  // ----- Formulario de contacto (abre el correo, sin action mailto inseguro) -----
+  // ----- Formulario de contacto: envía automáticamente al correo del hogar (FormSubmit) -----
   var form = document.getElementById('contactForm');
   if (form) {
+    var status = document.getElementById('formStatus');
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var email = form.getAttribute('data-email');
+    var endpoint = 'https://formsubmit.co/ajax/' + encodeURIComponent(email);
+
+    var setStatus = function (text, isError) {
+      if (!status) { return; }
+      status.hidden = false;
+      status.classList.toggle('is-error', !!isError);
+      status.textContent = text;
+    };
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var email = form.getAttribute('data-email');
-      var val = function (id) {
-        var el = document.getElementById(id);
-        return el ? el.value.trim() : '';
-      };
-      var nombre = val('nombre');
-      var telefono = val('telefono');
-      var correo = val('email');
-      var mensaje = val('mensaje');
+      // La validación nativa (required) ya bloquea envíos incompletos.
+      if (submitBtn) { submitBtn.disabled = true; }
+      setStatus('Enviando tu mensaje…', false);
 
-      var subject = 'Consulta desde la página web' + (nombre ? ' - ' + nombre : '');
-      var lines = [
-        'Nombre: ' + nombre,
-        'Teléfono: ' + telefono,
-        'Correo: ' + correo,
-        '',
-        'Mensaje:',
-        mensaje
-      ];
-      var href = 'mailto:' + email +
-        '?subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent(lines.join('\n'));
-
-      var status = document.getElementById('formStatus');
-      if (status) {
-        status.hidden = false;
-        status.textContent = 'Abriendo tu aplicación de correo para enviar el mensaje…';
-      }
-      window.location.href = href;
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      })
+        .then(function (r) { return r.json().catch(function () { return {}; }); })
+        .then(function (res) {
+          var ok = res && (res.success === true || res.success === 'true');
+          if (!ok) { throw new Error('no-ok'); }
+          setStatus('¡Gracias! Tu mensaje fue enviado. Te responderemos pronto.', false);
+          form.reset();
+        })
+        .catch(function () {
+          setStatus('No pudimos enviar el mensaje. Llámanos al 787-962-4875 o escríbenos por WhatsApp.', true);
+        })
+        .then(function () {
+          if (submitBtn) { submitBtn.disabled = false; }
+        });
     });
   }
 

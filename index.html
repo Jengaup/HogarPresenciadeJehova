@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Seguridad: restringe el origen de los recursos y protege la privacidad -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self'; form-action 'self'; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
   <title>Hogar La Presencia de Jehová — Cuido con amor y dignidad</title>
@@ -487,6 +487,12 @@
         </div>
 
         <form class="contact-form reveal" id="contactForm" data-email="hlapresenciadejehova@yahoo.com">
+          <!-- Ajustes de FormSubmit (envío automático al correo del hogar) -->
+          <input type="hidden" name="_subject" value="Nueva consulta desde la página web" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <!-- Trampa anti-spam: debe quedar vacío -->
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="field">
             <label for="nombre">Nombre completo</label>
             <input id="nombre" name="Nombre" type="text" autocomplete="name" required />
