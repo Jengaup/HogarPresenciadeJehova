@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jengaup.github.io/HogarPresenciadeJehova/sitemap.xml
+Sitemap: https://hogarlapresenciadejehova.com/sitemap.xml
