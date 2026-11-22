@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="emblemTitle emblemDesc">
+  <title id="emblemTitle">Hogar La Presencia de Jehová</title>
+  <desc id="emblemDesc">Emblema con un águila de alas abiertas, un libro abierto, una cruz y ramas de olivo.</desc>
+  <defs>
+    <linearGradient id="wingGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8a6d54"/>
+      <stop offset="1" stop-color="#4f3b2c"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9bd83"/>
+      <stop offset="1" stop-color="#b18a4e"/>
+    </linearGradient>
+    <linearGradient id="pageGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffdf8"/>
+      <stop offset="1" stop-color="#f0e6d2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="300" cy="300" r="284" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" opacity="0.9"/>
+  <circle cx="300" cy="300" r="270" fill="none" stroke="url(#goldGrad)" stroke-width="1" opacity="0.55"/>
+
+  <!-- Curved title text -->
+  <path id="topArc" d="M 96 300 A 204 204 0 0 1 504 300" fill="none"/>
+  <path id="bottomArc" d="M 108 300 A 192 192 0 0 0 492 300" fill="none"/>
+  <text fill="#4f3b2c" font-family="'Cormorant Garamond', Georgia, serif" font-size="58" font-weight="600" letter-spacing="6">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">HOGAR</textPath>
+  </text>
+  <text fill="#4f3b2c" font-family="'Cormorant Garamond', Georgia, serif" font-size="37" font-weight="600" letter-spacing="3">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">LA PRESENCIA DE JEHOVÁ</textPath>
+  </text>
+
+  <!-- Olive branches -->
+  <g fill="#9db08c" opacity="0.92">
+    <g>
+      <path d="M300 430 C 250 415 205 400 168 372" fill="none" stroke="#8fa47e" stroke-width="4" stroke-linecap="round"/>
+      <g>
+        <ellipse cx="270" cy="418" rx="15" ry="7" transform="rotate(-24 270 418)"/>
+        <ellipse cx="244" cy="408" rx="15" ry="7" transform="rotate(-30 244 408)"/>
+        <ellipse cx="220" cy="397" rx="15" ry="7" transform="rotate(-36 220 397)"/>
+        <ellipse cx="198" cy="385" rx="14" ry="6" transform="rotate(-42 198 385)"/>
+        <ellipse cx="180" cy="372" rx="12" ry="6" transform="rotate(-48 180 372)"/>
+      </g>
+    </g>
+    <g transform="translate(600,0) scale(-1,1)">
+      <path d="M300 430 C 250 415 205 400 168 372" fill="none" stroke="#8fa47e" stroke-width="4" stroke-linecap="round"/>
+      <g>
+        <ellipse cx="270" cy="418" rx="15" ry="7" transform="rotate(-24 270 418)"/>
+        <ellipse cx="244" cy="408" rx="15" ry="7" transform="rotate(-30 244 408)"/>
+        <ellipse cx="220" cy="397" rx="15" ry="7" transform="rotate(-36 220 397)"/>
+        <ellipse cx="198" cy="385" rx="14" ry="6" transform="rotate(-42 198 385)"/>
+        <ellipse cx="180" cy="372" rx="12" ry="6" transform="rotate(-48 180 372)"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Open book -->
+  <g>
+    <path d="M300 470 C 262 442 208 436 176 446 L176 500 C 210 492 264 498 300 522 Z" fill="url(#pageGrad)" stroke="#c9a86a" stroke-width="2"/>
+    <path d="M300 470 C 338 442 392 436 424 446 L424 500 C 390 492 336 498 300 522 Z" fill="url(#pageGrad)" stroke="#c9a86a" stroke-width="2"/>
+    <path d="M300 470 L300 522" stroke="#b18a4e" stroke-width="2.5"/>
+    <path d="M210 458 q40 -6 78 12 M210 474 q40 -6 78 12 M312 470 q40 -18 78 -12 M312 486 q40 -18 78 -12" stroke="#d8c7a3" stroke-width="2" fill="none" opacity="0.8"/>
+  </g>
+
+  <!-- Cross -->
+  <g fill="url(#goldGrad)" stroke="#a9803f" stroke-width="1">
+    <rect x="289" y="300" width="22" height="150" rx="4"/>
+    <rect x="258" y="336" width="84" height="20" rx="4"/>
+  </g>
+
+  <!-- Eagle -->
+  <g fill="url(#wingGrad)">
+    <!-- Left wing -->
+    <path d="M300 250
+      C 250 236 196 214 150 178
+      C 120 154 96 128 84 108
+      C 118 128 158 146 196 158
+      C 168 140 142 116 126 92
+      C 160 118 200 140 240 156
+      C 216 138 196 116 184 96
+      C 214 122 252 146 292 162
+      C 300 190 302 220 300 250 Z"/>
+    <!-- Right wing -->
+    <path d="M300 250
+      C 350 236 404 214 450 178
+      C 480 154 504 128 516 108
+      C 482 128 442 146 404 158
+      C 432 140 458 116 474 92
+      C 440 118 400 140 360 156
+      C 384 138 404 116 416 96
+      C 386 122 348 146 308 162
+      C 300 190 298 220 300 250 Z"/>
+    <!-- Body -->
+    <path d="M300 168 C 288 176 282 196 286 224 C 290 252 296 268 300 278 C 304 268 310 252 314 224 C 318 196 312 176 300 168 Z"/>
+    <!-- Head -->
+    <path d="M300 150 C 288 150 280 158 280 170 C 280 180 286 188 296 190 L 296 176 C 300 178 308 178 316 174 C 322 178 328 178 330 174 C 326 168 320 164 312 162 C 312 156 308 150 300 150 Z"/>
+  </g>
+</svg>
